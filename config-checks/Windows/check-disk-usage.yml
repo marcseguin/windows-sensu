@@ -1,0 +1,30 @@
+type: CheckConfig
+api_version: core/v2
+metadata:
+  created_by: admin
+  labels:
+    sensu.io/managed_by: sensuctl
+  name: check-disk-usage
+  namespace: default
+spec:
+  check_hooks: null
+  command: powershell.exe -noprofile -noninteractive -executionpolicy Bypass -command check-windows-disk.ps1 -WARNING 90 -CRITICAL 95
+  env_vars: null
+  handlers: []
+  high_flap_threshold: 0
+  interval: 60
+  low_flap_threshold: 0
+  output_metric_format: ""
+  output_metric_handlers: null
+  proxy_entity_name: ""
+  publish: true
+  round_robin: false
+  runtime_assets:
+  - sensu/sensu-windows-powershell-checks
+  secrets: null
+  stdin: false
+  subdue: null
+  subscriptions:
+  - windows_os
+  timeout: 30
+  ttl: 0

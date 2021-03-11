@@ -1,0 +1,23 @@
+type: Asset
+api_version: core/v2
+metadata:
+  annotations:
+    io.sensu.bonsai.api_url: https://bonsai.sensu.io/api/v1/assets/sensu/sensu-windows-powershell-checks
+    io.sensu.bonsai.name: sensu-windows-powershell-checks
+    io.sensu.bonsai.namespace: sensu
+    io.sensu.bonsai.tags: ""
+    io.sensu.bonsai.tier: Community
+    io.sensu.bonsai.url: https://bonsai.sensu.io/assets/sensu/sensu-windows-powershell-checks
+    io.sensu.bonsai.version: 0.0.4
+  created_by: admin
+  name: sensu/sensu-windows-powershell-checks
+  namespace: default
+spec:
+  builds:
+  - filters:
+    - entity.system.os == 'windows'
+    headers: null
+    sha512: a694627656dba4d3b7f22cd2f0b1daa5806f0a641ca93febb5cf459c897b26cee94de6373e3a196fa30f202d447c4eaa99cb90e1ca0c4a9eea43a9e44b82b56e
+    url: https://assets.bonsai.sensu.io/b4c5875e8d272d096f4bf0f69d2598b1755fe4a3/sensu-windows-powershell-checks.tar.gz
+  filters: null
+  headers: null

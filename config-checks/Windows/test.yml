@@ -1,0 +1,18 @@
+---
+type: CheckConfig
+api_version: core/v2
+metadata:
+  name: check-disk-usage
+  namespace: default
+spec:
+  interval: 60
+  command: >-
+    check-disk-usage
+    --include-fs-type "NTFS"
+    --exclude-fs-path "C:,D:"
+    --warning 90
+    --critical 95
+  subscriptions:
+  - entity:PC-2014
+  runtime_assets:
+  - nixwiz/check-disk-usage
